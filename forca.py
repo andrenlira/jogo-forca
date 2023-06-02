@@ -134,24 +134,17 @@ class Jogo:
         self.canvas1 = Frame(self.root)
         self.canvas1.pack()
 
-        # Espaço de uma linha em relação ao topo
-        Label(self.canvas1, text=' ').pack()
-        Label(self.canvas1, text='Letra ou Palavra').pack()
-
+        Label(self.canvas1, text='\nLetra ou Palavra').pack()
         self.nom = Entry(self.canvas1)
         self.nom.focus_force()
         self.nom.pack()
         self.nom.bind('<Return>', self.forca)
-
-        Label(self.canvas1, text=' ').pack()
-
         self.msg = Label(self.root, text=' '.join(self.lista_traco))
         self.msg.pack()
 
-        Label(self.canvas1, text='Letras Erradas: ').pack()
+        Label(self.canvas1, text='\nLetras Erradas: ').pack()
         self.msg2 = Label(self.root, text='')
         self.msg2.pack()
-
         self.msg3 = Label(self.root, text='Tentativas Restantes: 10')
         self.msg3.pack()
 
